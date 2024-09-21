@@ -5,7 +5,6 @@ HTTP API stats for Satisfactory.
 ## TODO
 
 - Expose more data
-- Proper authentication (there is currently no auth lmao)
 - Make scraper use the certificates from the server
 - Publish to SMR
 
