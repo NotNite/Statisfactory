@@ -33,13 +33,13 @@ class STATISFACTORY_API UStatisfactoryController : public UFGServerControllerBas
   GENERATED_BODY()
 
 public:
+  // Jank lol
   UPROPERTY()
   UWorld *World;
 
-  // TODO: Authentication
-  UFUNCTION(FGServerRequestHandler, FGServerRequestPrivilegeLevel = "NotAuthenticated")
-  FFGServerErrorResponse Statisfactory_GetPower(TArray<FPowerOutput> &OutData);
+  UFUNCTION(FGServerRequestHandler, FGServerRequestPrivilegeLevel = "Administrator")
+  FFGServerErrorResponse Statisfactory_GetPower(TArray<FPowerOutput> &OutData) const;
 
-  UFUNCTION(FGServerRequestHandler, FGServerRequestPrivilegeLevel = "NotAuthenticated")
+  UFUNCTION(FGServerRequestHandler, FGServerRequestPrivilegeLevel = "Administrator")
   FFGServerErrorResponse Statisfactory_GetDepots(TMap<FString, int32> &OutData) const;
 };

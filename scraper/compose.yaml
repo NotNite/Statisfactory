@@ -1,0 +1,10 @@
+services:
+  statisfactory:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+    env_file:
+      - .env
+    ports:
+      - 8080:8080

@@ -17,10 +17,11 @@ HTTP API stats for Satisfactory.
 
 ## Running the scraper
 
-Create `scraper/.env`:
+Run `server.GenerateAPIToken` in your server console, then create `scraper/.env`:
 
 ```text
 GAME_ENDPOINT="https://localhost:7777/api/v1"
+GAME_TOKEN="output of server.GenerateAPIToken"
 PORT=8080
 ```
 

@@ -10,7 +10,7 @@ static FFGServerErrorResponse SubsystemError =
     FFGServerErrorResponse::Error("statisfactory_subsystem", "Couldn't get subsystem");
 
 FFGServerErrorResponse STATISFACTORY_API
-UStatisfactoryController::Statisfactory_GetPower(TArray<FPowerOutput> &OutData) {
+UStatisfactoryController::Statisfactory_GetPower(TArray<FPowerOutput> &OutData) const {
   OutData = {};
 
   auto Subsystem = AFGCircuitSubsystem::Get(this->World);
@@ -18,11 +18,11 @@ UStatisfactoryController::Statisfactory_GetPower(TArray<FPowerOutput> &OutData) 
     return SubsystemError;
 
   TArray<int> Seen = {};
-  for (auto Pair : Subsystem->GetmCircuits()) {
+  for (auto Pair : Subsystem->mCircuits) {
     auto Circuit = Pair.Value;
     if (const auto PowerCircuit = Cast<UFGPowerCircuit>(Circuit)) {
       auto Id = PowerCircuit->GetCircuitGroupID();
-      if (Seen.Contains(Id))
+      if (Id == -1 || Seen.Contains(Id))
         continue;
       Seen.Push(Id);
 

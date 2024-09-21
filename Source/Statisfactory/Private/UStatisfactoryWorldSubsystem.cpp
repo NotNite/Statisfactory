@@ -16,10 +16,8 @@ void UStatisfactoryWorldSubsystem::RegisterRoute(UFGServerAPIManager *Manager, c
   Handler.HandlerObject = this->Controller;
   Handler.HandlerFunction = this->Controller->FindFunction(Name);
   Handler.FunctionName = FName(Name);
-  Handler.PrivilegeLevel = EPrivilegeLevel::NotAuthenticated;
-  auto handlers = Manager->GetmRegisteredHandlers();
-  handlers.Add(FString(Name), Handler);
-  Manager->SetmRegisteredHandlers(handlers);
+  Handler.PrivilegeLevel = EPrivilegeLevel::Administrator;
+  Manager->mRegisteredHandlers.Add(FString(Name), Handler);
 }
 
 void UStatisfactoryWorldSubsystem::PostInitialize() {

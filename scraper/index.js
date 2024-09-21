@@ -21,11 +21,12 @@ async function execute(command) {
     method: "POST",
     body: JSON.stringify({ function: command }),
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.GAME_TOKEN}`
     }
   });
   const data = await req.json();
-  if (!req.ok) {
+  if (!req.ok || (data != null && data.error)) {
     console.error(data);
     throw new Error(data);
   }
