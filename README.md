@@ -12,8 +12,6 @@ HTTP API stats for Satisfactory.
 ## Building
 
 - Set up [the Satisfactory 1.0 toolchain](https://docs-dev.ficsit.app/satisfactory-modding/latest/Development/BeginnersGuide/index.html)
-- Manually add `friend class` into the headers because the access transformers are broken
-  - Someone who actually knows what they're doing help me kthx
 - Copy the built mod to `FactoryGame/Mods/Statisfactory` in your dedicated server
 - Profit
 

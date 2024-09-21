@@ -18,7 +18,7 @@ UStatisfactoryController::Statisfactory_GetPower(TArray<FPowerOutput> &OutData) 
     return SubsystemError;
 
   TArray<int> Seen = {};
-  for (auto Pair : Subsystem->mCircuits) {
+  for (auto Pair : Subsystem->GetmCircuits()) {
     auto Circuit = Pair.Value;
     if (const auto PowerCircuit = Cast<UFGPowerCircuit>(Circuit)) {
       auto Id = PowerCircuit->GetCircuitGroupID();
