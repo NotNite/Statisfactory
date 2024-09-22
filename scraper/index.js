@@ -36,6 +36,7 @@ async function execute(command) {
 const prefix = "Statisfactory";
 const getPower = prefix + "_GetPower";
 const getDepots = prefix + "_GetDepots";
+const getSink = prefix + "_GetSink";
 
 const powerConsumed = new client.Gauge({
   name: "power_consumed",
@@ -64,6 +65,15 @@ const depotItem = new client.Gauge({
   labelNames: ["item"]
 });
 
+const coupons = new client.Gauge({
+  name: "coupons",
+  help: "Coupons"
+});
+const pointsToNextCoupon = new client.Gauge({
+  name: "points_to_next_coupon",
+  help: "Points to next coupon"
+});
+
 async function doPowerGrid() {
   const powerGrid = await execute(getPower);
   if (powerGrid.length < 1) return;
@@ -88,17 +98,20 @@ async function doDepots() {
   }
 }
 
-async function run() {
-  try {
-    await doPowerGrid();
-  } catch (e) {
-    console.error(e);
-  }
+async function doSink() {
+  const sink = await execute(getSink);
+  coupons.set(sink.coupons);
+  pointsToNextCoupon.set(sink.pointsToNextCoupon);
+}
 
-  try {
-    await doDepots();
-  } catch (e) {
-    console.error(e);
+async function run() {
+  const funcs = [doPowerGrid, doDepots, doSink];
+  for (const func of funcs) {
+    try {
+      await func();
+    } catch (e) {
+      console.error(e);
+    }
   }
 }
 

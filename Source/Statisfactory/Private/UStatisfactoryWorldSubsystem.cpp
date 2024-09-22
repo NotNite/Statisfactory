@@ -40,4 +40,5 @@ void UStatisfactoryWorldSubsystem::PostInitialize() {
   // The API registering doesn't work for me? so this will do
   this->RegisterRoute(ServerAPIManager, "Statisfactory_GetPower");
   this->RegisterRoute(ServerAPIManager, "Statisfactory_GetDepots");
+  this->RegisterRoute(ServerAPIManager, "Statisfactory_GetSink");
 }

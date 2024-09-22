@@ -28,6 +28,17 @@ struct FPowerOutput {
   float BatteryPowerInput;
 };
 
+USTRUCT()
+struct FTicketData {
+  GENERATED_BODY()
+
+  UPROPERTY()
+  int Coupons;
+
+  UPROPERTY()
+  int PointsToNextCoupon;
+};
+
 UCLASS()
 class STATISFACTORY_API UStatisfactoryController : public UFGServerControllerBase {
   GENERATED_BODY()
@@ -42,4 +53,7 @@ public:
 
   UFUNCTION(FGServerRequestHandler, FGServerRequestPrivilegeLevel = "Administrator")
   FFGServerErrorResponse Statisfactory_GetDepots(TMap<FString, int32> &OutData) const;
+
+  UFUNCTION(FGServerRequestHandler, FGServerRequestPrivilegeLevel = "Administrator")
+  FFGServerErrorResponse Statisfactory_GetSink(FTicketData &OutData) const;
 };

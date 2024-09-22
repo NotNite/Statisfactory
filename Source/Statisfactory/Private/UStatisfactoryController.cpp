@@ -4,6 +4,7 @@
 #include "FGCentralStorageSubsystem.h"
 #include "FGCircuitSubsystem.h"
 #include "FGDSSharedTypes.h"
+#include "FGResourceSinkSubsystem.h"
 #include "StructuredLog.h"
 
 static FFGServerErrorResponse SubsystemError =
@@ -60,6 +61,18 @@ FFGServerErrorResponse UStatisfactoryController::Statisfactory_GetDepots(TMap<FS
       continue;
     OutData.Add(Name.ToString(), Amount);
   }
+
+  return FFGServerErrorResponse::Ok();
+}
+
+FFGServerErrorResponse UStatisfactoryController::Statisfactory_GetSink(FTicketData &OutData) const {
+  OutData = {};
+  auto Subsystem = AFGResourceSinkSubsystem::Get(this->World);
+  if (Subsystem == nullptr)
+    return SubsystemError;
+
+  OutData.Coupons = Subsystem->GetNumCoupons();
+  OutData.PointsToNextCoupon = Subsystem->GetNumPointsToNextCoupon(EResourceSinkTrack::RST_Default);
 
   return FFGServerErrorResponse::Ok();
 }
