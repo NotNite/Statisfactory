@@ -24,7 +24,7 @@ Think of it as a chain of servers talking to each other:
   - Save this for later, it should start with `ew`
 - Clone this repository: `git clone https://github.com/NotNite/Statisfactory.git`
 - Go into this folder: `cd Statisfactory/grafana`
-- Create your own environment variable: `cp .env.example .env`
+- Create your own environment file: `cp .env.example .env`
 - Edit the `.env` file
   - Enter your API key for the server
   - Change your [time zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
