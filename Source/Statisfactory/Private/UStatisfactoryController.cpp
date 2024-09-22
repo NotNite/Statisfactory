@@ -57,8 +57,6 @@ FFGServerErrorResponse UStatisfactoryController::Statisfactory_GetDepots(TMap<FS
   for (auto Item : Out) {
     auto Name = UFGItemDescriptor::GetItemName(Item.ItemClass.Get());
     auto Amount = Item.Amount;
-    if (Amount == 0)
-      continue;
     OutData.Add(Name.ToString(), Amount);
   }
 
