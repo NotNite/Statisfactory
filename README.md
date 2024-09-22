@@ -2,17 +2,9 @@
 
 HTTP API stats for Satisfactory.
 
-## TODO
+## Setting up Grafana
 
-- Expose more data
-- Make scraper use the certificates from the server
-- Publish to SMR
-
-## Building
-
-- Set up [the Satisfactory 1.0 toolchain](https://docs-dev.ficsit.app/satisfactory-modding/latest/Development/BeginnersGuide/index.html)
-- Copy the built mod to `FactoryGame/Mods/Statisfactory` in your dedicated server
-- Profit
+If you've never used Grafana or Prometheus before, follow [this guide](https://github.com/NotNite/Statisfactory/blob/main/grafana/README.md) to set up a new Grafana instance on your server.
 
 ## Running the scraper
 
@@ -25,3 +17,7 @@ PORT=8080
 ```
 
 Then point a Prometheus node at `http://localhost:8080/metrics`.
+
+## Credits
+
+Statisfactory uses [Mutant Standard](https://mutant.tech/) emoji, licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).

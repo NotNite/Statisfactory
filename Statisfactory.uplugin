@@ -7,9 +7,9 @@
 	"Category": "Modding",
 	"CreatedBy": "NotNite",
 	"CreatedByURL": "https://notnite.com/",
-	"DocsURL": "",
+	"DocsURL": "https://github.com/NotNite/Statisfactory",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "https://github.com/NotNite/Statisfactory/issues",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
@@ -21,6 +21,6 @@
 			"LoadingPhase": "Default"
 		}
 	],
-	"Plugins": [],
+	"GameVersion": ">=365306",
 	"SemVersion": "1.0.0"
 }

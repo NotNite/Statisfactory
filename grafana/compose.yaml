@@ -1,0 +1,33 @@
+services:
+  statisfactory:
+    image: ghcr.io/notnite/statisfactory-scraper:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - PORT=8080
+
+  grafana:
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    ports:
+      # Change this if port 3000 is taken on your machine
+      - 3000:3000
+    volumes:
+      - grafana:/var/lib/grafana
+      - ./cfg/grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
+      - ./cfg/grafana/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+      - ./cfg/grafana/dashboards:/var/lib/grafana/dashboards
+
+  prometheus:
+    image: prom/prometheus:latest
+    restart: unless-stopped
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yaml'
+    volumes:
+      - prometheus:/prometheus
+      - ./cfg/prometheus.yaml:/etc/prometheus/prometheus.yaml
+
+volumes:
+  grafana:
+  prometheus:

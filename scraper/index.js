@@ -127,6 +127,12 @@ const job = new CronJob(
   },
   null, // on complete
   false, // start instantly
-  "America/New_York"
+  process.env.TZ ?? "America/New_York"
 );
+
+process.on("SIGINT", () => {
+  job.stop();
+  process.exit();
+});
+
 job.start();

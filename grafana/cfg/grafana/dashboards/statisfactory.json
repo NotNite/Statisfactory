@@ -1,0 +1,2724 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "default": true,
+        "type": "prometheus",
+        "uid": "adyhxpuakmrcwf"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 10,
+        "x": 0,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "depot",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{item}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Depots Over Time",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "default": true,
+        "type": "prometheus",
+        "uid": "adyhxpuakmrcwf"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-RdYlGr"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              }
+            ]
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Uranium Waste"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Plutonium Waste"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Steel Beam"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Iron Plate"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Concrete"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Silica"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Limestone"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Raw Quartz"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rotor"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Modular Frame"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Iron Rod"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Screw"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Wire"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Turbo Motor"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Somersloop"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Mercer Sphere"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Supercomputer"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Computer"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Crystal Oscillator"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Motor"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Beryl Nut"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Paleberry"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Bacon Agaric"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Water"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Object Scanner"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Crude Oil"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Purple Power Slug"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Yellow Power Slug"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Blue Power Slug"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Nitrogen Gas"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "SAM"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Encased Industrial Beam"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rubber"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Copper Ore"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Iron Ore"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Caterium Ore"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Bauxite"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Sulfur"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Uranium"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Coal"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Iodine-Infused Filter"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Portable Miner"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Hazmat Suit"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Factory Cart™"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Golden Factory Cart™"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Iron Rebar"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rebar Gun"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Stun Rebar"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Explosive Rebar"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Shatter Rebar"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Homing Rifle Ammo"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rifle"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rifle Ammo"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Turbo Rifle Ammo"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Cable"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Power Shard"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Medicinal Inhaler"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Reinforced Iron Plate"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Fused Modular Frame"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Superposition Oscillator"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Wood"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Leaves"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Xeno-Zapper"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Iron Ingot"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Copper Sheet"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Alclad Aluminum Sheet"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Time Crystal"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Excited Photonic Matter"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Ficsite Trigon"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Dark Matter Residue"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Cooling System"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Diamonds"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Reanimated SAM"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Neural-Quantum Processor"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Dark Matter Crystal"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Magnetic Field Generator"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "AI Expansion Server"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Ficsite Ingot"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Steel Pipe"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Assembly Director System"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Radio Control Unit"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Aluminum Ingot"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Biochemical Sculptor"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "SAM Fluctuator"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Caterium Ingot"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Petroleum Coke"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Quartz Crystal"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Fuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Turbofuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Turbofuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Fuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Heavy Oil Residue"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Empty Canister"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Compacted Coal"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Plastic"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Biomass"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Circuit Board"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Polymer Resin"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Empty Fluid Tank"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Ionized Fuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Ionized Fuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Rocket Fuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Rocket Fuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Nitric Acid"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Smart Plating"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Copper Ingot"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Heavy Oil Residue"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Water"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Liquid Biofuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Liquid Biofuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Solid Biofuel"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Oil"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Steel Ingot"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Versatile Framework"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Alumina Solution"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Heavy Modular Frame"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Aluminum Scrap"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Aluminum Casing"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Alumina Solution"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Modular Engine"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Automated Wiring"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Adaptive Control Unit"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "High-Speed Connector"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Stator"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "AI Limiter"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Quickwire"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Heat Sink"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Battery"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Sulfuric Acid"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Sulfuric Acid"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Encased Uranium Cell"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Non-Fissile Uranium"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Nitrogen Gas"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Uranium Fuel Rod"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Electromagnetic Control Rod"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Pressure Conversion Cube"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Plutonium Pellet"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Packaged Nitric Acid"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Nuclear Pasta"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Plutonium Fuel Rod"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Encased Plutonium Cell"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Copper Powder"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Dissolved Silica"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Black Powder"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Thermal Propulsion Rocket"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Alien Protein"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Hog Remains"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Spitter Remains"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Mycelia"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Chainsaw"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Xeno-Basher"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Jetpack"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Gas Filter"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Fabric"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Hoverpack"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Ballistic Warp Drive"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Singularity Cell"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Ficsonium Fuel Rod"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Ficsonium"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Alien DNA Capsule"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Hatcher Remains"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Stinger Remains"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Zipline"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Blade Runners"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Parachute"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Nobelisk Detonator"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Nobelisk"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Pulse Nobelisk"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Cluster Nobelisk"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Nuke Nobelisk"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Gas Nobelisk"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Gas Mask"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Smokeless Powder"
+              },
+              "properties": [
+                {
+                  "id": "max",
+                  "value": 500
+                }
+              ]
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 7,
+        "x": 10,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "displayMode": "lcd",
+        "maxVizHeight": 300,
+        "minVizHeight": 16,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "sizing": "auto",
+        "valueMode": "color"
+      },
+      "pluginVersion": "11.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "sort_desc(depot)",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": true,
+          "legendFormat": "{{item}}",
+          "range": false,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Dimensional Depots",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "default": true,
+        "type": "prometheus",
+        "uid": "adyhxpuakmrcwf"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#727273",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Points Per Minute"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#a779a7",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 7,
+        "x": 17,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "expr": "(-1 * idelta(points_to_next_coupon[10s])) * 12",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "interval": "",
+          "legendFormat": "Points Per Minute",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "points_to_next_coupon",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "interval": "",
+          "legendFormat": "Points Until Next Coupon",
+          "range": true,
+          "refId": "B",
+          "useBackend": false
+        }
+      ],
+      "title": "AWESOME Points",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "default": true,
+        "type": "prometheus",
+        "uid": "adyhxpuakmrcwf"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#5dafc5",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 7,
+        "x": 17,
+        "y": 7
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "expr": "coupons + ignoring(item) depot{item=\"FICSIT Coupon\"}",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "Total",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "coupons",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "Pending",
+          "range": true,
+          "refId": "B",
+          "useBackend": false
+        }
+      ],
+      "title": "FICSIT Coupons",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "default": true,
+        "type": "prometheus",
+        "uid": "adyhxpuakmrcwf"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#727273",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Power Produced"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#727273",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Power Consumed"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#e59344",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Max Consumption"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#5cb0c5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Power Capacity"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#cfcece",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "power_produced",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "Power Produced",
+          "range": true,
+          "refId": "Power Produced",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "power_consumed",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "Power Consumed",
+          "range": true,
+          "refId": "Power Consumed",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "maximum_power_consumption",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "Max Consumption",
+          "range": true,
+          "refId": "Max Consumption",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adyhxpuakmrcwf"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "power_production_capacity",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "Power Capacity",
+          "range": true,
+          "refId": "Power Capacity",
+          "useBackend": false
+        }
+      ],
+      "title": "Power Consumption",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Statisfactory",
+  "uid": "fdyhzb7pkn7y8b",
+  "version": 24,
+  "weekStart": ""
+}
