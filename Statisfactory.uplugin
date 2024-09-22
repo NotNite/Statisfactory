@@ -21,6 +21,7 @@
 			"LoadingPhase": "Default"
 		}
 	],
+	"Plugins": [],
 	"GameVersion": ">=365306",
 	"SemVersion": "1.0.0"
 }
