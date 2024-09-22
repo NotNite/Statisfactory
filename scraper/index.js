@@ -37,6 +37,7 @@ const prefix = "Statisfactory";
 const getPower = prefix + "_GetPower";
 const getDepots = prefix + "_GetDepots";
 const getSink = prefix + "_GetSink";
+const getTrains = prefix + "_GetTrains";
 
 const powerConsumed = new client.Gauge({
   name: "power_consumed",
@@ -74,6 +75,12 @@ const pointsToNextCoupon = new client.Gauge({
   help: "Points to next coupon"
 });
 
+const trainPosition = new client.Gauge({
+  name: "train_position",
+  help: "Train position",
+  labelNames: ["train", "axis"]
+});
+
 async function doPowerGrid() {
   const powerGrid = await execute(getPower);
   if (powerGrid.length < 1) return;
@@ -104,8 +111,18 @@ async function doSink() {
   pointsToNextCoupon.set(sink.pointsToNextCoupon);
 }
 
+async function doTrains() {
+  const trains = await execute(getTrains);
+  for (const train of trains) {
+    // I feel like this is the wrong way of doing this
+    trainPosition.labels({ train: train.name, axis: "x" }).set(train.x);
+    trainPosition.labels({ train: train.name, axis: "y" }).set(train.y);
+    trainPosition.labels({ train: train.name, axis: "z" }).set(train.z);
+  }
+}
+
 async function run() {
-  const funcs = [doPowerGrid, doDepots, doSink];
+  const funcs = [doPowerGrid, doDepots, doSink, doTrains];
   for (const func of funcs) {
     try {
       await func();

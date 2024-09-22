@@ -41,4 +41,5 @@ void UStatisfactoryWorldSubsystem::PostInitialize() {
   this->RegisterRoute(ServerAPIManager, "Statisfactory_GetPower");
   this->RegisterRoute(ServerAPIManager, "Statisfactory_GetDepots");
   this->RegisterRoute(ServerAPIManager, "Statisfactory_GetSink");
+  this->RegisterRoute(ServerAPIManager, "Statisfactory_GetTrains");
 }

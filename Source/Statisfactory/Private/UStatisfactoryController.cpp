@@ -3,9 +3,9 @@
 #include "../../../../../Source/FactoryGame/Public/Server/FGDSSharedTypes.h"
 #include "FGCentralStorageSubsystem.h"
 #include "FGCircuitSubsystem.h"
-#include "FGDSSharedTypes.h"
+#include "FGRailroadSubsystem.h"
 #include "FGResourceSinkSubsystem.h"
-#include "StructuredLog.h"
+#include "FGTrain.h"
 
 static FFGServerErrorResponse SubsystemError =
     FFGServerErrorResponse::Error("statisfactory_subsystem", "Couldn't get subsystem");
@@ -71,6 +71,27 @@ FFGServerErrorResponse UStatisfactoryController::Statisfactory_GetSink(FTicketDa
 
   OutData.Coupons = Subsystem->GetNumCoupons();
   OutData.PointsToNextCoupon = Subsystem->GetNumPointsToNextCoupon(EResourceSinkTrack::RST_Default);
+
+  return FFGServerErrorResponse::Ok();
+}
+
+FFGServerErrorResponse UStatisfactoryController::Statisfactory_GetTrains(TArray<FTrainData> &OutData) const {
+  OutData = {};
+  auto Subsystem = AFGRailroadSubsystem::Get(this->World);
+  if (Subsystem == nullptr)
+    return SubsystemError;
+
+  TArray<AFGTrain *> Trains = {};
+  Subsystem->GetAllTrains(Trains);
+  for (const auto Train : Trains) {
+    FTrainData Data = {};
+    Data.Name = Train->GetTrainName().ToString();
+    auto Position = Train->mSimulationData.TrainLocation;
+    Data.X = Position.X;
+    Data.Y = Position.Y;
+    Data.Z = Position.Z;
+    OutData.Add(Data);
+  }
 
   return FFGServerErrorResponse::Ok();
 }

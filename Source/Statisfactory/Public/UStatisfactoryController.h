@@ -39,6 +39,23 @@ struct FTicketData {
   int PointsToNextCoupon;
 };
 
+USTRUCT()
+struct FTrainData {
+  GENERATED_BODY()
+
+  UPROPERTY()
+  FString Name;
+
+  UPROPERTY()
+  float X;
+
+  UPROPERTY()
+  float Y;
+
+  UPROPERTY()
+  float Z;
+};
+
 UCLASS()
 class STATISFACTORY_API UStatisfactoryController : public UFGServerControllerBase {
   GENERATED_BODY()
@@ -56,4 +73,7 @@ public:
 
   UFUNCTION(FGServerRequestHandler, FGServerRequestPrivilegeLevel = "Administrator")
   FFGServerErrorResponse Statisfactory_GetSink(FTicketData &OutData) const;
+
+  UFUNCTION(FGServerRequestHandler, FGServerRequestPrivilegeLevel = "Administrator")
+  FFGServerErrorResponse Statisfactory_GetTrains(TArray<FTrainData> &OutData) const;
 };
